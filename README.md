@@ -131,4 +131,12 @@ MIT. Use it, fork it, adapt it. Attribution appreciated but not required.
 
 ## Author
 
-Built by [Milan Juza](https://www.milanjuza.com). CTO, reader, EA practitioner. Feedback via GitHub issues.
+Built by [Milan Juza](https://www.milanjuza.com).
+
+<img width="1786" height="1508" alt="Deliberatio-04" src="https://github.com/user-attachments/assets/1e5c4678-029f-44b7-a9f3-b46ba3cd7fb6" />
+<img width="1788" height="1448" alt="Deliberatio-03" src="https://github.com/user-attachments/assets/12186db3-553a-4251-9ad5-2a423db25d75" />
+<img width="2142" height="1720" alt="Deliberatio-02" src="https://github.com/user-attachments/assets/e965b2b3-5602-47e3-90c2-d0066c708cfd" />
+<img width="1792" height="1188" alt="Deliberatio-01" src="https://github.com/user-attachments/assets/04faf4f8-c76e-4328-afc1-28199389f2d5" />
+<img width="2358" height="1288" alt="Deliberatio-05" src="https://github.com/user-attachments/assets/2af7a6e8-969f-44dd-90bf-46ab6fa52c6c" />
+<img width="2296" height="1356" alt="Deliberatio-07" src="https://github.com/user-attachments/assets/bf006ed7-c3c8-4f07-9b9e-a7b10cef82ca" />
+<img width="2362" height="1560" alt="Deliberatio-06" src="https://github.com/user-attachments/assets/751640b3-8a9d-42c2-94bf-c7faff4d7a46" />
