@@ -6,15 +6,11 @@ Deliberatio implements Will MacAskill's Maximising Expected Choice-Worthiness (M
 
 It runs entirely in your browser. No server, no account, no tracking. It's just a single HTML file.
 
----
-
 ## The problem it solves
 
 Hard decisions are rarely hard because you lack information. They are hard because you hold genuine uncertainty across moral frameworks that give different verdicts. A utilitarian calculus says one thing; a deontological constraint says another; care ethics draws attention to relational obligations you hadn't foregrounded. The standard response is to pick the framework that happens to support the conclusion you're already leaning towards. Deliberatio makes that move difficult.
 
 The tool forces you to be explicit about three things before you see any result: which moral theories you find credible, how much credence you assign to each, and how each of your options fares under each theory. Only then does it aggregate.
-
----
 
 ## How it works
 
@@ -33,8 +29,6 @@ Where:
 Scores within each theory are divided by their maximum absolute value before weighting. This means a +8 under classical utilitarianism and a +8 under Kantian ethics are treated as equally good relative to alternatives under each theory, regardless of how differently calibrated those scales might be in practice.
 
 If all options score identically under a theory (max|score| = 0), that theory is excluded from the sum entirely.
-
----
 
 ## Features
 
@@ -66,15 +60,11 @@ Plus the ability to add custom theories.
 
 **Full keyboard support.** `N` new decision, `/` search, `R` show result, `T` theory breakdown, `A` add option, `B` back to list, `S` settings, `D` dark/light toggle, `E` export, `?` help.
 
-**Three themes.** Dark (default), light, and high-contrast accessible.
-
----
+**Three themes.** Dark, light, and high-contrast accessible.
 
 ## Quick presets
 
 If you want a starting point rather than building a theory set from scratch, five presets are available: Consequentialist, Deontological, Virtue-led, Justice-focused, and Balanced (one theory from each major family).
-
----
 
 ## How to use it
 
@@ -88,8 +78,6 @@ If you want a starting point rather than building a theory set from scratch, fiv
 
 5. **Record your reasoning** in the Notes field.
 
----
-
 ## Installation
 
 No installation. Download `deliberatio.html` and open it in any modern browser. That is the entire tool.
@@ -101,33 +89,23 @@ open deliberatio.html
 
 Or download the file directly from the [releases page](https://github.com/milanjuza/deliberatio/releases).
 
----
-
 ## Data and privacy
 
 All data is stored in your browser's localStorage under the `delib_` prefix. Nothing is transmitted anywhere. The tool has no dependencies on external services beyond Google Fonts and KaTeX (for formula rendering), both loaded from CDN. If you want to use it fully offline, host both locally and update the stylesheet links.
 
 Export your decisions regularly. localStorage is cleared by browser privacy tools and can be lost when clearing site data. The export format is JSON and is human-readable.
 
----
-
 ## Design
 
 The Meridian design system: a minimal dark-first UI with Inter (sans) and Lora (serif) type, a warm gold accent, three theme modes, and a layout that works at any viewport from 360px upwards.
-
----
 
 ## Theoretical background
 
 The MEC principle is developed in Will MacAskill's *Moral Uncertainty* (2020, Oxford University Press), co-authored with Krister Bykvist and Toby Ord. The tie-breaker protocol draws on the broader moral uncertainty literature and Ross's prima facie duties framework.
 
----
-
 ## Licence
 
-MIT. Use it, fork it, adapt it. Attribution appreciated but not required.
-
----
+Free for personal use.
 
 ## Author
 
