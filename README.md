@@ -252,7 +252,7 @@ Normalisation ensures that different ethical theories contribute proportionally 
 
 No installation is required.
 
-Simply download `deliberatio.html` directly from release page.
+Simply download `deliberatio.html` directly from the [release page](https://github.com/milanjuza/deliberatio/releases).
 
 # Privacy
 
