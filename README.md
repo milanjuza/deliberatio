@@ -1,107 +1,278 @@
 # Deliberatio
 
-**A structured decision tool grounded in moral uncertainty.**
+ **Reason through difficult moral decisions under ethical uncertainty.**
 
-Deliberatio implements Will MacAskill's Maximising Expected Choice-Worthiness (MEC) principle: when you face a hard decision and multiple ethical frameworks you take seriously point in different directions, it makes that disagreement explicit, weights each theory by your credence, and computes a principled recommendation.
+Most decision tools assume you've already decided which moral principles are correct. Life is rarely that simple.
 
-It runs entirely in your browser. No server, no account, no tracking. It's just a single HTML file.
+Should you tell a painful truth or protect someone's feelings? Donate to the most effective charity or support a cause close to home? Honour a promise or prevent greater harm? Prioritise one person over many? These decisions are difficult not because we lack facts, but because different ethical frameworks often point towards different answers. Deliberatio helps you make those disagreements explicit.
 
-## The problem it solves
+<img width="1792" height="1188" alt="Deliberatio-01" src="https://github.com/user-attachments/assets/04faf4f8-c76e-4328-afc1-28199389f2d5" />
 
-Hard decisions are rarely hard because you lack information. They are hard because you hold genuine uncertainty across moral frameworks that give different verdicts. A utilitarian calculus says one thing; a deontological constraint says another; care ethics draws attention to relational obligations you hadn't foregrounded. The standard response is to pick the framework that happens to support the conclusion you're already leaning towards. Deliberatio makes that move difficult.
+Rather than relying on intuition—or whichever moral theory happens to feel most persuasive in the moment—it lets you evaluate every option across the ethical theories you take seriously, weight those theories according to your confidence in them, and combines them into a transparent recommendation. It doesn't tell you what is morally right. It helps you reason more consistently when you're uncertain which moral principles are right.
 
-The tool forces you to be explicit about three things before you see any result: which moral theories you find credible, how much credence you assign to each, and how each of your options fares under each theory. Only then does it aggregate.
+Deliberatio runs entirely in your browser as a single HTML file. There is no server, no account, no tracking, and no data ever leaves your computer.
 
-## How it works
+## Why Deliberatio?
 
-The core formula is MacAskill's MEC:
+Most of us don't consistently reason under moral uncertainty.
+
+Instead, we tend to:
+
+- favour the ethical framework that supports the conclusion we already prefer
+- switch between principles without noticing
+- overlook why different theories disagree
+- treat uncertain moral beliefs as if they were certainties
+
+Deliberatio encourages a different approach.
+
+It asks you to state explicitly:
+
+1. which ethical theories you consider plausible
+2. how much confidence you place in each
+3. how well each available option performs under every theory
+
+Only then does it aggregate the results.
+
+The process doesn't eliminate moral disagreement—but it makes your reasoning transparent, structured and easier to examine.
+
+# How it works
+
+Using Deliberatio involves four steps.
+
+## 1. Choose your ethical theories
+
+Select the moral theories you consider genuinely plausible. The application includes twenty-two built-in theories across seven major traditions, and you can add your own.
+
+## 2. Assign your credences
+
+Rather than pretending certainty, estimate how much confidence you have in each theory. You specify a lower and upper credence bound. Deliberatio uses the midpoint as the working weight while preserving the range to acknowledge your uncertainty.
+
+## 3. Evaluate your options
+
+Score every available option under every selected theory. Each theory asks a different question.
+
+A utilitarian may prioritise wellbeing.
+
+A Kantian may reject using people merely as means.
+
+A virtue ethicist may ask what a virtuous person would do.
+
+Instead of collapsing these perspectives into a single intuition, Deliberatio keeps them separate until every evaluation has been completed.
+
+<img width="2142" height="1720" alt="Deliberatio-02" src="https://github.com/user-attachments/assets/e965b2b3-5602-47e3-90c2-d0066c708cfd" />
+
+## 4. Review the result
+
+Deliberatio combines your assessments into a single recommendation using Will MacAskill's [Maximising Expected Choice-Worthiness](https://static1.squarespace.com/static/5506078de4b02d88372eee4e/t/5bc7224a0852299b5cd60e86/1539777103255/Why+Maximize+Expected+Choice-Worthiness%3F.pdf) framework.
+
+Alongside the final ranking, you can see:
+
+- the contribution made by every moral theory
+- weighted choice-worthiness scores
+- radar chart comparisons
+- complete scoring breakdowns
+
+Nothing is hidden.
+
+Every recommendation is fully explainable.
+
+# Features
+
+## Moral uncertainty built in
+
+Deliberatio is designed around the idea that you may reasonably assign non-zero confidence to several competing ethical theories simultaneously.
+
+Rather than forcing you to choose one framework, it allows them all to contribute proportionally to the final recommendation.
+
+## Twenty-two built-in ethical theories
+
+The application includes theories from seven major traditions.
+
+### Consequentialist
+
+- Classical Utilitarianism
+- Preference Utilitarianism
+- Negative Utilitarianism
+- Prioritarianism
+- Sufficientarianism
+
+### Suffering-focused
+
+- Suffering-Focused Ethics
+- Moral Circle Expansionism
+
+### Deontological
+
+- Kantian Ethics
+- Rossian Pluralistic Deontology
+- Rights-Based Ethics
+- Contractualism
+
+### Virtue ethics
+
+- Aristotelian Virtue Ethics
+- Confucian Ethics
+- Care Ethics
+
+### Justice and fairness
+
+- Rawlsian Justice as Fairness
+- Capability Approach
+- Equality of Opportunity
+
+### Pragmatic
+
+- Rule Consequentialism
+- Threshold Deontology
+- Moral Particularism
+
+### Existential and humanistic
+
+- Existential Ethics
+- Humanism
+
+Each theory includes a concise explanation together with a link to the relevant Stanford Encyclopedia of Philosophy article.
+
+You can also create entirely custom theories.
+
+## Anti-anchoring workflow
+
+One of the easiest ways to bias a decision is to inspect partial results before you've finished evaluating every option.
+
+Deliberatio deliberately prevents this.
+
+Results remain hidden until meaningful scoring has been completed, reducing the temptation to unconsciously adjust later scores to support an emerging favourite.
+
+<img width="1788" height="1448" alt="Deliberatio-03" src="https://github.com/user-attachments/assets/12186db3-553a-4251-9ad5-2a423db25d75" />
+
+
+## Transparent recommendations
+
+Every recommendation can be inspected.
+
+See exactly:
+
+- how each theory scored every option
+- the weighted contribution from every theory
+- overall choice-worthiness
+- visual comparisons across theories
+
+The goal is not merely to produce an answer, but to make the reasoning behind it understandable.
+
+## Structured tie-breakers
+
+Some decisions remain genuinely close.
+
+When the difference between the top two options falls below the configured threshold, Deliberatio activates a structured tie-breaking protocol.
+
+The six-stage framework considers:
+
+1. preserving the status quo
+2. reversibility
+3. minimising potential harm
+4. contextual sensitivity
+5. practical wisdom (*phronesis*)
+6. fair randomisation
+
+Each stage is applied in order until a meaningful preference emerges.
+
+## Local-first by design
+
+Everything happens locally.
+
+- no accounts
+- no analytics
+- no cloud storage
+- no tracking
+- no subscriptions
+
+Your decisions remain entirely under your control.
+
+## Robust local storage
+
+Each decision is stored independently rather than inside a single database object.
+
+Additional safeguards include:
+
+- rotating checkpoints
+- quota protection
+- JSON export
+- human-readable backups
+
+## Accessibility
+
+- Full keyboard navigation
+- Dark, light and high-contrast themes
+- Responsive layout
+
+<img width="1786" height="1508" alt="Deliberatio-04" src="https://github.com/user-attachments/assets/1e5c4678-029f-44b7-a9f3-b46ba3cd7fb6" />
+
+# Example
+
+Imagine you're deciding whether to accept a high-paying job at a company whose products you believe may cause social harm.
+
+A consequentialist may focus on the overall balance of benefits and harms.
+
+A deontologist may consider whether accepting the role violates important duties.
+
+A virtue ethicist may ask what accepting the role says about your character.
+
+Rather than allowing one perspective to dominate by intuition alone, Deliberatio evaluates the decision through each lens before combining them according to your confidence in those theories.
+
+# The mathematics
+
+Deliberatio implements Will MacAskill's **Maximising Expected Choice-Worthiness (MEC)** principle.
+
+For each option:
 
 ```
 CW(j) = Σᵢ [ wᵢ · ( sᵢⱼ / maxⱼ|sᵢⱼ| ) ]
 ```
 
 Where:
-- `CW(j)` is the choice-worthiness of option `j`
-- `wᵢ` is the normalised credence weight for theory `i` (derived from the midpoint of your credence range)
-- `sᵢⱼ` is your raw score for option `j` under theory `i`, from −10 to +10
-- `maxⱼ|sᵢⱼ|` is the largest absolute score under theory `i`: the normalisation term that makes theories comparable across different scales
 
-Scores within each theory are divided by their maximum absolute value before weighting. This means a +8 under classical utilitarianism and a +8 under Kantian ethics are treated as equally good relative to alternatives under each theory, regardless of how differently calibrated those scales might be in practice.
+- **CW(j)** is the final choice-worthiness of option *j*
+- **wᵢ** is the normalised credence assigned to theory *i*
+- **sᵢⱼ** is the score assigned to option *j* under theory *i*
+- scores are normalised within each theory before weighting
 
-If all options score identically under a theory (max|score| = 0), that theory is excluded from the sum entirely.
+Normalisation ensures that different ethical theories contribute proportionally even if their internal scoring scales differ.
 
-## Features
+# Quick start
 
-**22 moral theories across 7 families**, each with a full description and a Stanford Encyclopedia of Philosophy link:
+1. Select the ethical theories you consider plausible.
+2. Assign credence ranges.
+3. Create a decision.
+4. Score every option under every theory.
+5. Reveal the result.
+6. Review the explanation.
+7. Record your reasoning.
 
-- Consequentialist: Classical Utilitarianism, Preference Utilitarianism, Negative Utilitarianism, Prioritarianism, Sufficientarianism
-- Suffering-Focused: Suffering-Focused Ethics, Moral Circle Expansionism
-- Deontological: Kantian Ethics, Rossian Pluralistic Deontology, Rights-Based Ethics, Contractualism
-- Virtue Ethics: Aristotelian Virtue Ethics, Confucian Ethics, Care Ethics
-- Justice and Fairness: Rawlsian Justice as Fairness, Capability Approach, Equality of Opportunity
-- Pragmatic / Decision-Oriented: Rule Consequentialism, Threshold Deontology, Moral Particularism
-- Existential / Humanistic: Existential Ethics, Humanism
+# Installation
 
-Plus the ability to add custom theories.
+No installation is required.
 
-**Credence ranges, not point estimates.** Each theory gets a lower and upper credence bound. The midpoint is used as the working weight. Ranges encourage honesty about uncertainty at the meta-level: how confident are you in your credences themselves?
+Simply download `deliberatio.html` directly from release page.
 
-**Weighted choice-worthiness scores** with normalised bar charts, plus radar chart visualisation across theories.
+# Privacy
 
-**Per-theory contribution breakdown.** After revealing results, the tool shows which theories drove each option's score, with numeric contributions, and surfaces a collapsible breakdown table showing every theory's weighted input.
+Deliberatio stores all data locally using your browser's `localStorage`.
 
-**Anti-anchoring gate.** You cannot reveal the result mid-scoring. The tool blocks early revelation if no cells have been scored, and warns if fewer than half the cells have been touched. Seeing an intermediate ranking before completing all scores is one of the most reliable ways to corrupt the output.
+Nothing is transmitted anywhere.
 
-**Tie-breaker protocol (T1–T6).** When the gap between the top two options falls below the close-call threshold (0.12, or 0.06 for irreversible decisions), six structured tie-breakers appear in order: status-quo preservation, reversibility preference, minimal harm preference, contextual sensitivity, virtue-theoretic phronesis, and randomisation fairness. Apply in sequence and stop when one produces a clear preference.
+No information leaves your computer.
 
-**Four options maximum.** The tool supports up to four options per decision. This is a deliberate constraint: more options dilute scoring attention and make the matrix unwieldy without improving the quality of reasoning.
+Regular JSON exports are recommended, as browser storage may be cleared by privacy tools or browser settings.
 
-**Data storage hardened for longevity.** Decisions are stored individually in localStorage (one key per decision), not as a single blob. A three-slot rotating checkpoint protects the index. Quota-exceeded errors are surfaced with an export prompt rather than silent data loss. Export to JSON is available at any time.
+# Theoretical background
 
-**Full keyboard support.** `N` new decision, `/` search, `R` show result, `T` theory breakdown, `A` add option, `B` back to list, `S` settings, `D` dark/light toggle, `E` export, `?` help.
+Deliberatio is inspired by the framework developed in:
 
-**Three themes.** Dark, light, and high-contrast accessible.
+> Will MacAskill, Krister Bykvist & Toby Ord,
+> *Moral Uncertainty*
+> Oxford University Press (2020)
 
-## Quick presets
-
-If you want a starting point rather than building a theory set from scratch, five presets are available: Consequentialist, Deontological, Virtue-led, Justice-focused, and Balanced (one theory from each major family).
-
-## How to use it
-
-1. **Open Settings** and enable the moral theories you take seriously. Set a credence range for each. You do not need ranges that sum to 1; the tool normalises automatically. Enable at least two theories: using only one defeats the purpose of the framework.
-
-2. **Create a decision.** Give it a clear title, write a context description (affected parties, constraints, what makes this morally non-trivial), set the stakes level, and name your options. Stakes matter: irreversible decisions lower the close-call threshold, making tie-breakers trigger more readily.
-
-3. **Score each option** in the scoring matrix, working theory by theory. Do not reveal the result yet. Score all theories first. Use the full −10 to +10 range; anchor on the best option under each theory and score others relative to it.
-
-4. **Click Show result.** Read the choice-worthiness scores, the contributing theories, and the radar chart. If the tool flags a close call, work through the tie-breakers in order.
-
-5. **Record your reasoning** in the Notes field.
-
-## Installation
-
-No installation. Download `deliberatio.html` and open it in any modern browser. That is the entire tool.
-
-```
-git clone https://github.com/milanjuza/deliberatio.git
-open deliberatio.html
-```
-
-Or download the file directly from the [releases page](https://github.com/milanjuza/deliberatio/releases).
-
-## Data and privacy
-
-All data is stored in your browser's localStorage under the `delib_` prefix. Nothing is transmitted anywhere. The tool has no dependencies on external services beyond Google Fonts and KaTeX (for formula rendering), both loaded from CDN. If you want to use it fully offline, host both locally and update the stylesheet links.
-
-Export your decisions regularly. localStorage is cleared by browser privacy tools and can be lost when clearing site data. The export format is JSON and is human-readable.
-
-## Design
-
-The Meridian design system: a minimal dark-first UI with Inter (sans) and Lora (serif) type, a warm gold accent, three theme modes, and a layout that works at any viewport from 360px upwards.
-
-## Theoretical background
-
-The MEC principle is developed in Will MacAskill's *Moral Uncertainty* (2020, Oxford University Press), co-authored with Krister Bykvist and Toby Ord. The tie-breaker protocol draws on the broader moral uncertainty literature and Ross's prima facie duties framework.
+Its recommendation engine implements the principle of **Maximising Expected Choice-Worthiness**, allowing decisions to reflect uncertainty across competing moral theories rather than assuming any single framework is certainly correct.
 
 ## Licence
 
@@ -111,10 +282,6 @@ Free for personal use.
 
 Built by [Milan Juza](https://www.milanjuza.com).
 
-<img width="1786" height="1508" alt="Deliberatio-04" src="https://github.com/user-attachments/assets/1e5c4678-029f-44b7-a9f3-b46ba3cd7fb6" />
-<img width="1788" height="1448" alt="Deliberatio-03" src="https://github.com/user-attachments/assets/12186db3-553a-4251-9ad5-2a423db25d75" />
-<img width="2142" height="1720" alt="Deliberatio-02" src="https://github.com/user-attachments/assets/e965b2b3-5602-47e3-90c2-d0066c708cfd" />
-<img width="1792" height="1188" alt="Deliberatio-01" src="https://github.com/user-attachments/assets/04faf4f8-c76e-4328-afc1-28199389f2d5" />
 <img width="2358" height="1288" alt="Deliberatio-05" src="https://github.com/user-attachments/assets/2af7a6e8-969f-44dd-90bf-46ab6fa52c6c" />
 <img width="2296" height="1356" alt="Deliberatio-07" src="https://github.com/user-attachments/assets/bf006ed7-c3c8-4f07-9b9e-a7b10cef82ca" />
 <img width="2362" height="1560" alt="Deliberatio-06" src="https://github.com/user-attachments/assets/751640b3-8a9d-42c2-94bf-c7faff4d7a46" />
